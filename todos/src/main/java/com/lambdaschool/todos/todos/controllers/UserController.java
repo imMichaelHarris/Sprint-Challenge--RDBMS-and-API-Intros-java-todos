@@ -67,5 +67,15 @@ public class UserController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
+    @PostMapping(value = "/users/todo/{userid}", consumes = {"application/json"}, produces = {"application/json"})
+    public ResponseEntity<?> addTodo(Authentication authentication, @PathVariable int userid, Todo newTodo){
+        if(userService.findUserByName(authentication.getName()) == userService.findUserById(userid)){
+            newTodo =  todoService.save(userid, newTodo);
+
+            return new ResponseEntity<>(newTodo, HttpStatus.CREATED);
+        }
+        return new ResponseEntity<>(newTodo, HttpStatus.OK);
+    }
+
     }
 
