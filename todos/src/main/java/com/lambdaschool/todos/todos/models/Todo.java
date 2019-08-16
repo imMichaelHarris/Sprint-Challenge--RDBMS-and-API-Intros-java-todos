@@ -17,7 +17,7 @@ public class Todo {
     private boolean completed = false;
 
     @ManyToOne
-    @JoinTable(name = "userid")
+    @JoinColumn(name = "userid")
     @JsonIgnoreProperties("todos")
     private User user;
 
