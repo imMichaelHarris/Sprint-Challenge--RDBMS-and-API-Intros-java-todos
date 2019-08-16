@@ -9,6 +9,8 @@ public interface TodoService {
 
     Todo findTodoById(long id);
 
+    List<Todo> findAllTodosByUser(long id);
+
     void delete(long id);
 
     Todo save(Todo todo);

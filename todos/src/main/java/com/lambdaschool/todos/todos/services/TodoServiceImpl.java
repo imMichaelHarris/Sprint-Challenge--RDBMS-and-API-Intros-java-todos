@@ -24,6 +24,11 @@ public class TodoServiceImpl implements TodoService{
     }
 
     @Override
+    public List<Todo> findAllTodosByUser(long id) {
+        return null;
+    }
+
+    @Override
     public void delete(long id) {
 
     }
