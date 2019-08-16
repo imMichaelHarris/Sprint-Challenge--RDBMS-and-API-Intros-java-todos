@@ -17,7 +17,7 @@ public class Todo {
     private boolean completed = false;
 
     @ManyToOne
-    @JoinColumn(name = "userid")
+    @JoinColumn(name = "userid", nullable = false)
     @JsonIgnoreProperties("todos")
     private User user;
 
@@ -25,6 +25,9 @@ public class Todo {
         this.description = description;
         this.datestarted = datestarted;
         this.user = user;
+    }
+
+    public Todo() {
     }
 
     public long getTodoid() {
