@@ -2,6 +2,20 @@ package com.lambdaschool.todos.todos;
 
 // provided by Vivek Vishwanath
 
+import com.lambdaschool.todos.todos.models.Role;
+import com.lambdaschool.todos.todos.models.Todo;
+import com.lambdaschool.todos.todos.models.User;
+import com.lambdaschool.todos.todos.models.UserRoles;
+import com.lambdaschool.todos.todos.repos.RoleRepository;
+import com.lambdaschool.todos.todos.repos.ToDoRepository;
+import com.lambdaschool.todos.todos.repos.UserRepository;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.ArrayList;
+import java.util.Date;
+
 @Transactional
 @Component
 public class SeedData implements CommandLineRunner {
