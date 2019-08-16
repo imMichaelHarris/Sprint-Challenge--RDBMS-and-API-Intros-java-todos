@@ -26,12 +26,12 @@ public class TodoServiceImpl implements TodoService{
 
     @Override
     public List<Todo> findAllTodosByUser(long id) throws EntityNotFoundException {
-        List<Todo> todos = todorepos.findByUserId(id);
-
-        if(todos == null){
-            throw new EntityNotFoundException("User doesn't have any todos.");
-        }
-        return todos;
+//        List<Todo> todos = todorepos.findByUserId(id);
+//
+//        if(todos == null){
+//            throw new EntityNotFoundException("User doesn't have any todos.");
+//        }
+        return todorepos.getTodoList();
     }
 
     @Override
