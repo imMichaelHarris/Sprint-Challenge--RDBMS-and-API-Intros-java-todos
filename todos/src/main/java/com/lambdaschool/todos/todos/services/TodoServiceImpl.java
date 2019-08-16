@@ -31,7 +31,8 @@ public class TodoServiceImpl implements TodoService{
 //        if(todos == null){
 //            throw new EntityNotFoundException("User doesn't have any todos.");
 //        }
-        return todorepos.getTodoList();
+//        return todorepos.getTodoList();
+        return null;
     }
 
     @Override
