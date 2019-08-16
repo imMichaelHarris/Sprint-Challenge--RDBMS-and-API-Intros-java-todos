@@ -57,7 +57,7 @@ public class UserController {
     {
         newTodo =  todoService.save(userid, newTodo);
 
-        return new ResponseEntity<>(null, HttpStatus.CREATED);
+        return new ResponseEntity<>(newTodo, HttpStatus.CREATED);
     }
 
     @DeleteMapping(value = "/userid/{userid}")
