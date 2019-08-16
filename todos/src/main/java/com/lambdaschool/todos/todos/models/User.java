@@ -35,14 +35,13 @@ public class User extends Auditable {
     public User() {
     }
 
-    public User(String username, String password, List<UserRoles> userRoles, List<Todo> todos) {
+    public User(String username, String password, List<UserRoles> userRoles) {
         setUsername(username);
         setPassword(password);
         for (UserRoles ur : userRoles) {
             ur.setUser(this);
         }
         this.userRoles = userRoles;
-        this.todos = todos;
     }
 
     public long getUserid() {
