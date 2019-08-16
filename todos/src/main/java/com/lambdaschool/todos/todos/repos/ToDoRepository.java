@@ -7,6 +7,7 @@ import org.springframework.data.repository.CrudRepository;
 import java.util.List;
 
 public interface ToDoRepository extends CrudRepository<Todo, Long> {
+        List<Todo> findByUserId(long id);
 //    @Query(value = )
 //    List<>
 
